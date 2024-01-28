@@ -1,7 +1,13 @@
+@font-face {
+  font-family: playfont;
+  src: url("../font/play.ttf");
+}
+
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  font-family: playfont;
 }
 
 .navbar {
