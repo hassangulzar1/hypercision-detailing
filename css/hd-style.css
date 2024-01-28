@@ -15,7 +15,7 @@
   font-size: 5rem;
   color: white;
   position: absolute;
-  top: 80px;
+  top: 70px;
   z-index: 100;
   text-align: center;
 }
@@ -433,33 +433,35 @@
     text-align: center;
   }
   .crowsl_img {
-    height: 250px;
+    height: 400px;
+    width: 100vw;
     margin: auto;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .heading_1 {
     font-size: 3rem;
-    color: white;
-    position: absolute;
-    top: 80px;
-    z-index: 100;
-    text-align: center;
   }
   .crowsl_img {
-    height: 300px;
+    width: 100vw;
+    height: 400px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .heading_1 {
     font-size: 4rem;
-    color: white;
-    position: absolute;
-    top: 80px;
-    z-index: 100;
-    text-align: center;
   }
   .crowsl_img {
-    height: 300px;
+    width: 100vw;
+    height: 500px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .heading_1 {
+    font-size: 4rem;
+  }
+  .crowsl_img {
+    width: 80vw;
+    height: 500px;
   }
 }
