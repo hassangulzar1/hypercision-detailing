@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-utilities.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/hd-style.css" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-custom align-items-center nav-bg"
+      style="background-color: black"
+    >
+      <div class="container">
+        <a class="nav-hd text-light text-center" href="/"
+          ><img src="./media/image2.png" alt="logo" id="logo-hd"
+        /></a>
+        <div class="d-flex">
+          <a class="btn rounded-pill me-2 btn-hd-2 hero-btn-hd" href="#">
+            Log in</a
+          >
+          <a class="btn rounded-pill me-2 btn-hd hero-btn-hd" href="#"
+            >Sign In</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="background-color: white"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item me-4">
+              <a
+                class="nav-link text-light"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="./package.html">Packages</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="#">info</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="#">About us</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="nav-item me-4">
+              <div class="dropdown" id="searchDropdown">
+                <li
+                  class="nav-link text-light"
+                  style="cursor: pointer"
+                  onclick="toggleDropdown()"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+                </li>
+                <div class="dropdown-content" id="searchDropdownContent">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search here"
+                  />
+                  <!-- Additional dropdown content can be added here -->
+                </div>
+              </div>
+            </div>
+            <div class="btn-group nav-hd-hero">
+              <div
+                type="button"
+                class="dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Account
+              </div>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">login</a></li>
+                <li><a class="dropdown-item" href="#">Sign up</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container" style="padding-top: 150px">
+      <h3 style="color: #5177ff" id="hd4">Interior and exterior packages</h3>
+      <div class="divider-hd"></div>
+      <div class="container">
+        <div class="row text-center mb-hd">
+          <div class="col-lg-3 col-md-4 col-sm-4 mb-5">
+            <div class="card" style="width: 100%">
+              <img
+                src="./media/Rectangle 19.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-4">Mini Valet</h5>
+                <h5 class="card-title mb-3">From £45</h5>
+                <h6>-:Package includes:-</h6>
+                <p class="card-text">
+                  Citrus pre-wash <br />
+
+                  Full exterior wash (2 bucket safe wash) <br />
+
+                  Wheels cleaned + tyres dressed <br />
+
+                  Dried with microfibre towel <br />
+
+                  Interior fully vacuumed <br />
+
+                  Dash and plastics dressed <br />
+
+                  Interior windows cleaned <br />
+                </p>
+                <a href="#" class="btn btn-hd">Book here</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-4 mb-5">
+            <div class="card" style="width: 100%">
+              <img
+                src="./media/Rectangle 19.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-4">Full Valet</h5>
+                <h5 class="card-title mb-3">From £70</h5>
+                <h6>-:Package includes:-</h6>
+                <p class="card-text">
+                  *Mini Valet* <br />
+
+                  Wax exterior <br />
+
+                  Exterior plastics dressed
+                </p>
+                <a href="#" class="btn btn-hd">Book here</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-4 mb-5">
+            <div class="card" style="width: 100%">
+              <img
+                src="./media/Rectangle 19.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-4">Premium Valet</h5>
+                <h5 class="card-title mb-3">From £100</h5>
+                <h6>-:Package includes:-</h6>
+                <p class="card-text">
+                  *Full Valet* <br />
+
+                  Si02 Sealant applied for protection<br />
+
+                  2 stage liquid decontamination to remove embedded iron
+                  particles and tar.
+                </p>
+                <a href="#" class="btn btn-hd">Book here</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4 mb-5">
+            <div class="card" style="width: 100%">
+              <img
+                src="./media/Rectangle 19.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-4">HYPRECISION DETAIL</h5>
+                <h5 class="card-title mb-3">From £150</h5>
+                <h6>-:Package includes:-</h6>
+                <p class="card-text">COMMING SOON</p>
+                <a href="#" class="btn btn-hd">Book here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
