@@ -10,6 +10,16 @@
   font-family: playfont;
 }
 
+/* !Heading 1  */
+.heading_1 {
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  top: 80px;
+  z-index: 100;
+  text-align: center;
+}
+
 .navbar {
   padding-top: 7px;
   position: fixed;
@@ -403,4 +413,35 @@
 }
 #heroinput::placeholder {
   color: white;
+}
+
+@media only screen and (max-width: 576px) {
+  .heading_1 {
+    font-size: 2.3rem;
+    color: white;
+    position: absolute;
+    top: 80px;
+    z-index: 100;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .heading_1 {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 80px;
+    z-index: 100;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .heading_1 {
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    top: 80px;
+    z-index: 100;
+    text-align: center;
+  }
 }
