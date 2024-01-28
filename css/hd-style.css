@@ -415,6 +415,14 @@
   color: white;
 }
 
+.crowsl_img {
+  width: 50%;
+  padding-top: 100px;
+  height: 450px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
 @media only screen and (max-width: 576px) {
   .heading_1 {
     font-size: 2.3rem;
@@ -423,6 +431,10 @@
     top: 80px;
     z-index: 100;
     text-align: center;
+  }
+  .crowsl_img {
+    height: 250px;
+    margin: auto;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -434,6 +446,9 @@
     z-index: 100;
     text-align: center;
   }
+  .crowsl_img {
+    height: 300px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .heading_1 {
@@ -443,5 +458,8 @@
     top: 80px;
     z-index: 100;
     text-align: center;
+  }
+  .crowsl_img {
+    height: 300px;
   }
 }
