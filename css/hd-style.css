@@ -12,10 +12,10 @@
 
 /* !Heading 1  */
 .heading_1 {
-  font-size: 5rem;
+  font-size: 3rem;
   color: white;
   position: absolute;
-  top: 70px;
+  top: 80px;
   z-index: 100;
   text-align: center;
 }
@@ -425,7 +425,7 @@
 
 @media only screen and (max-width: 576px) {
   .heading_1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     color: white;
     position: absolute;
     top: 80px;
@@ -440,7 +440,7 @@
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .heading_1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .crowsl_img {
     width: 100vw;
@@ -449,7 +449,7 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .heading_1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .crowsl_img {
     width: 100vw;
@@ -458,7 +458,7 @@
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .heading_1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .crowsl_img {
     width: 80vw;
