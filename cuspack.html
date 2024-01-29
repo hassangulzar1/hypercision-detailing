@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-utilities.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/hd-style.css" />
+  </head>
+
+  <body>
+    <!--! Navbar  -->
+    <nav
+      class="navbar navbar-expand-lg navbar-custom align-items-center nav-bg"
+      style="background-color: black"
+    >
+      <div class="container">
+        <a class="nav-hd text-light text-center" href="/"
+          ><img src="./media/image2.png" alt="logo" id="logo-hd"
+        /></a>
+        <div class="d-flex">
+          <a class="btn rounded-pill me-2 btn-hd-2 hero-btn-hd" href="#">
+            Log in</a
+          >
+          <a class="btn rounded-pill me-2 btn-hd hero-btn-hd" href="#"
+            >Sign In</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="background-color: white"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item me-4">
+              <a
+                class="nav-link text-light"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="./package.html">Packages</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="./cuspack.html">Portfolio</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="#">info</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="#">About us</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="nav-item me-4">
+              <div class="dropdown" id="searchDropdown">
+                <li
+                  class="nav-link text-light"
+                  style="cursor: pointer"
+                  onclick="toggleDropdown()"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+                </li>
+                <div class="dropdown-content" id="searchDropdownContent">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search here"
+                  />
+                  <!-- Additional dropdown content can be added here -->
+                </div>
+              </div>
+            </div>
+            <div class="btn-group nav-hd-hero">
+              <div
+                type="button"
+                class="dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Account
+              </div>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">login</a></li>
+                <li><a class="dropdown-item" href="#">Sign up</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--! Custom package container  -->
+    <div class="container-fluid" style="padding-top: 150px">
+      <h1 style="font-size: 60px; font-weight: 400">Create your package</h1>
+    </div>
+
+    <!--! First Section  -->
+    <section
+      id="progress_Section1"
+      class="d-block"
+      style="margin-top: 50px; margin-bottom: 50px"
+    >
+      <div class="row text-center">
+        <div class="col">Stage 1 - Interior</div>
+        <div class="col">Stage 2 - Exterior</div>
+        <div class="col">Extras</div>
+        <div class="col">Confirm</div>
+      </div>
+      <div class="progress_div">
+        <div class="progress-bar__wrapper">
+          <progress id="progress-bar" value="25" max="100"></progress>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 style="font-size: 40px; font-weight: 700; text-align: center">
+          STAGE 1 - Interior
+        </h1>
+
+        <h1
+          class="mt-5"
+          style="font-size: 35px; font-weight: 400; text-align: center"
+        >
+          Choose your package
+        </h1>
+
+        <div class="container-fluid justify-content-center">
+          <div class="row">
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Bronze</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="firstSecCard()">
+                <p style="color: #ffffff" class="mt-4">Citrus pre-wash</p>
+                <p style="color: #ffffff" class="mt-4">
+                  Dash and plastics dressed
+                </p>
+                <p style="color: #ffffff" class="mt-4">
+                  Interior windows cleaned
+                </p>
+              </div>
+            </div>
+            <!-- !1st Section 2nd Card  -->
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Silver</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="firstSecCard()">
+                <p style="color: #ffffff" class="mt-4">BRONZE PACKAGE</p>
+                <p style="color: #ffffff" class="mt-4">
+                  All interior surfaces sanitised
+                </p>
+                <p style="color: #ffffff" class="mt-4">
+                  Wet and dry vacuum car seats and matts
+                </p>
+              </div>
+            </div>
+            <!--! 1st Section 3rd Card  -->
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Gold</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="firstSecCard()">
+                <p style="color: #ffffff" class="mt-4">
+                  BRONZE + SILVER PACKAGES
+                </p>
+                <p style="color: #ffffff" class="mt-4">Shampoo seats</p>
+                <p style="color: #ffffff" class="mt-4">Signature frangrance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--! Second Section  -->
+    <section
+      id="progress_Section2"
+      style="margin-top: 50px; margin-bottom: 50px; display: none"
+    >
+      <div class="row text-center">
+        <div class="col">Stage 1 - Interior</div>
+        <div class="col">Stage 2 - Exterior</div>
+        <div class="col">Extras</div>
+        <div class="col">Confirm</div>
+      </div>
+      <div class="progress_div">
+        <div class="progress-bar__wrapper">
+          <progress id="progress-bar" value="50" max="100"></progress>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 style="font-size: 40px; font-weight: 700; text-align: center">
+          STAGE 2 - Exterior
+        </h1>
+
+        <h1
+          class="mt-5"
+          style="font-size: 35px; font-weight: 400; text-align: center"
+        >
+          Choose your package
+        </h1>
+
+        <div class="container-fluid justify-content-center">
+          <div class="row">
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Bronze</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="secondSecCard()">
+                <p style="color: #ffffff" class="mt-4">Citrus pre-wash</p>
+                <p style="color: #ffffff" class="mt-4">
+                  Dash and plastics dressed
+                </p>
+                <p style="color: #ffffff" class="mt-4">
+                  Interior windows cleaned
+                </p>
+              </div>
+            </div>
+            <!-- !1st Section 2nd Card  -->
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Silver</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="secondSecCard()">
+                <p style="color: #ffffff" class="mt-4">BRONZE PACKAGE</p>
+                <p style="color: #ffffff" class="mt-4">
+                  All interior surfaces sanitised
+                </p>
+                <p style="color: #ffffff" class="mt-4">
+                  Wet and dry vacuum car seats and matts
+                </p>
+              </div>
+            </div>
+            <!--! 1st Section 3rd Card  -->
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Gold</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="secondSecCard()">
+                <p style="color: #ffffff" class="mt-4">
+                  BRONZE + SILVER PACKAGES
+                </p>
+                <p style="color: #ffffff" class="mt-4">Shampoo seats</p>
+                <p style="color: #ffffff" class="mt-4">Signature frangrance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--! Third Section  -->
+    <section
+      id="progress_Section3"
+      style="margin-top: 50px; margin-bottom: 50px; display: none"
+    >
+      <div class="row text-center">
+        <div class="col">Stage 1 - Interior</div>
+        <div class="col">Stage 2 - Exterior</div>
+        <div class="col">Extras</div>
+        <div class="col">Confirm</div>
+      </div>
+      <div class="progress_div">
+        <div class="progress-bar__wrapper">
+          <progress id="progress-bar" value="75" max="100"></progress>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 style="font-size: 40px; font-weight: 700; text-align: center">
+          Extras
+        </h1>
+
+        <h1
+          class="mt-5"
+          style="font-size: 35px; font-weight: 400; text-align: center"
+        >
+          Choose your package
+        </h1>
+
+        <div class="container-fluid justify-content-center">
+          <div class="row">
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Bronze</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="thirdSecCard()">
+                <p style="color: #ffffff" class="mt-4">Citrus pre-wash</p>
+                <p style="color: #ffffff" class="mt-4">
+                  Dash and plastics dressed
+                </p>
+                <p style="color: #ffffff" class="mt-4">
+                  Interior windows cleaned
+                </p>
+              </div>
+            </div>
+            <!-- !3rd Section 2nd Card  -->
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Silver</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="thirdSecCard()">
+                <p style="color: #ffffff" class="mt-4">BRONZE PACKAGE</p>
+                <p style="color: #ffffff" class="mt-4">
+                  All interior surfaces sanitised
+                </p>
+                <p style="color: #ffffff" class="mt-4">
+                  Wet and dry vacuum car seats and matts
+                </p>
+              </div>
+            </div>
+            <!--! 3rd Section 3rd Card  -->
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Gold</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto" onclick="thirdSecCard()">
+                <p style="color: #ffffff" class="mt-4">
+                  BRONZE + SILVER PACKAGES
+                </p>
+                <p style="color: #ffffff" class="mt-4">Shampoo seats</p>
+                <p style="color: #ffffff" class="mt-4">Signature frangrance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--! Fourth Section  -->
+    <section
+      id="progress_Section4"
+      class="d-none"
+      style="margin-top: 50px; margin-bottom: 50px"
+    >
+      <div class="row text-center">
+        <div class="col">Stage 1 - Interior</div>
+        <div class="col">Stage 2 - Exterior</div>
+        <div class="col">Extras</div>
+        <div class="col">Confirm</div>
+      </div>
+      <div class="progress_div">
+        <div class="progress-bar__wrapper">
+          <progress id="progress-bar" value="100" max="100"></progress>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 style="font-size: 40px; font-weight: 700; text-align: center">
+          Confirm
+        </h1>
+
+        <h1
+          class="mt-5"
+          style="font-size: 35px; font-weight: 400; text-align: center"
+        >
+          Choose your package
+        </h1>
+
+        <div class="container-fluid justify-content-center">
+          <div class="row">
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Bronze</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto">
+                <p style="color: #ffffff" class="mt-4">Citrus pre-wash</p>
+                <p style="color: #ffffff" class="mt-4">
+                  Dash and plastics dressed
+                </p>
+                <p style="color: #ffffff" class="mt-4">
+                  Interior windows cleaned
+                </p>
+              </div>
+            </div>
+            <!-- !1st Section 2nd Card -->
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Silver</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto">
+                <p style="color: #ffffff" class="mt-4">BRONZE PACKAGE</p>
+                <p style="color: #ffffff" class="mt-4">
+                  All interior surfaces sanitised
+                </p>
+                <p style="color: #ffffff" class="mt-4">
+                  Wet and dry vacuum car seats and matts
+                </p>
+              </div>
+            </div>
+            <!--! 1st Section 3rd Card  -->
+            <div
+              class="col col-md-4 d-flex flex-column justify-content-cente text-center"
+            >
+              <p class="my-2 fs-5" style="font-weight: 700">Gold</p>
+              <p class="my-2 fs-6">£20</p>
+              <p>Package includes:</p>
+              <div class="custom_card mx-auto">
+                <p style="color: #ffffff" class="mt-4">
+                  BRONZE + SILVER PACKAGES
+                </p>
+                <p style="color: #ffffff" class="mt-4">Shampoo seats</p>
+                <p style="color: #ffffff" class="mt-4">Signature frangrance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--! Footer Section  -->
+    <div class="container-fluid bg-hd">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="text-light">Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="text-light">Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="text-light">Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Features</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5 class="text-light">Subscribe to our newsletter</h5>
+              <p style="color: grey">
+                Monthly digest of what's new and exciting from us.
+              </p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-hd" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p class="text-light">© 2022 Company, Inc. All rights reserved.</p>
+          <ul class="d-flex mx-auto mx-sm-0" style="list-style: none">
+            <li class="me-3">
+              <a href="">
+                <svg
+                  width="2em"
+                  height="2em"
+                  style="color: white"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <title>facebook</title>
+                  <path
+                    d="M21.79 1H2.21C1.54 1 1 1.54 1 2.21v19.57c0 .68.54 1.22 1.21 1.22h10.54v-8.51H9.9v-3.33h2.86V8.71c0-2.84 1.74-4.39 4.27-4.39.85 0 1.71.04 2.56.13v2.97h-1.75c-1.38 0-1.65.65-1.65 1.62v2.12h3.3l-.43 3.33h-2.89V23h5.61c.67 0 1.21-.54 1.21-1.21V2.21C23 1.54 22.46 1 21.79 1Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li class="me-3">
+              <a href="#">
+                <svg
+                  width="2em"
+                  height="2em"
+                  style="color: white"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <title>twitter</title>
+                  <path
+                    d="M23 5.13c-.81.36-1.69.61-2.61.72.94-.56 1.66-1.45 2-2.51-.88.52-1.85.9-2.89 1.1A4.558 4.558 0 0 0 16.18 3a4.543 4.543 0 0 0-4.42 5.58c-3.78-.19-7.13-2-9.37-4.75-.39.67-.62 1.45-.62 2.28 0 1.58.8 2.97 2.02 3.78-.75-.02-1.45-.23-2.06-.57v.06c0 2.2 1.57 4.04 3.65 4.45-.38.12-.78.17-1.19.17-.29 0-.58-.03-.85-.08a4.557 4.557 0 0 0 4.25 3.16 9.112 9.112 0 0 1-5.64 1.95c-.37 0-.73-.02-1.08-.06 2.01 1.29 4.4 2.04 6.97 2.04 8.36 0 12.93-6.92 12.93-12.93 0-.2 0-.39-.01-.59.86-.65 1.63-1.45 2.24-2.36Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+
+            <li class="me-5">
+              <a href="#">
+                <svg
+                  width="2em"
+                  height="2em"
+                  style="color: white"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <title>youtube</title>
+                  <path
+                    d="M23 12s0-3.85-.46-5.58c-.25-.95-1-1.7-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46c-.95.25-1.69 1.01-1.94 1.96C1 8.15 1 12 1 12s.04 3.85.5 5.58c.25.95 1 1.7 1.95 1.96 1.71.46 8.59.46 8.59.46s6.88 0 8.6-.46c.95-.25 1.69-1.01 1.94-1.96.46-1.73.42-5.58.42-5.58Zm-13 3.27V8.73L15.5 12 10 15.27Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
