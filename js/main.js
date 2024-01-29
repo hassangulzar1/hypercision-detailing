@@ -51,3 +51,39 @@ const thirdSecCard = (price) => {
   );
   costElement.innerHTML = sum + "£";
 };
+
+//! Back button login
+const backBtn1 = () => {
+  secondSec.classList.remove("d-block");
+  secondSec.classList.add("d-none");
+  firstSec.classList.remove("d-none");
+  firstSec.classList.add("d-block");
+
+  costArray.pop();
+  sum = costArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  costElement.innerHTML = sum + "£";
+};
+
+const backBtn2 = () => {
+  secondSec.classList.remove("d-none");
+  secondSec.classList.add("d-block");
+  thirdSec.classList.remove("d-block");
+  thirdSec.classList.add("d-none");
+
+  costArray.pop();
+  sum = costArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  costElement.innerHTML = sum + "£";
+};
+
+const backBtn3 = () => {
+  thirdSec.classList.remove("d-none");
+  thirdSec.classList.add("d-block");
+  fourthSec.classList.remove("d-block");
+  fourthSec.classList.add("d-none");
+};
