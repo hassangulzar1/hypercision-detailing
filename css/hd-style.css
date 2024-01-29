@@ -500,36 +500,126 @@
   box-shadow: none;
 }
 
-/* Progress Bar Css  */
-.progress-bar__wrapper {
-  position: relative;
+/*! Progress Bar Css  */
+
+/* ! 1st Progress Bar  */
+.progress2 {
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
 }
-.progress-bar__value {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-progress {
-  width: 100%;
+
+.progress-bar1 {
   height: 10px;
-  background-color: #ddd;
-  transition: width 300ms ease;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
 }
-progress[value]::-webkit-progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #ddd;
-  transition: width 300ms ease;
-}
-progress[value]::-webkit-progress-value {
-  width: 0;
+.progress-moved .progress-bar1 {
+  width: 25%;
   background-color: #2353e1;
-  transition: width 300ms ease;
+  animation: progressAnimation1 4s;
+}
+
+@keyframes progressAnimation1 {
+  0% {
+    width: 0%;
+    background-color: #7a9afd;
+  }
+  100% {
+    width: 25%;
+    background-color: #2353e1;
+  }
+}
+
+/* ! 2nd Progress Bar  */
+.progress-bar2 {
+  height: 10px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar2 {
+  width: 50%;
+  background-color: #2353e1;
+  animation: progressAnimation2 3s;
+}
+
+@keyframes progressAnimation2 {
+  0% {
+    width: 25%;
+    background-color: #2353e1;
+  }
+  100% {
+    width: 50%;
+    background-color: #2353e1;
+  }
+}
+/* ! 3nd Progress Bar  */
+.progress-bar3 {
+  height: 10px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar3 {
+  width: 75%;
+  background-color: #2353e1;
+  animation: progressAnimation3 3s;
+}
+
+@keyframes progressAnimation3 {
+  0% {
+    width: 50%;
+    background-color: #2353e1;
+  }
+  100% {
+    width: 75%;
+    background-color: #2353e1;
+  }
+}
+
+/* ! 4th Progress Bar  */
+.progress-bar4 {
+  height: 10px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar4 {
+  width: 100%;
+  background-color: #2353e1;
+  animation: progressAnimation4 3s;
+}
+
+@keyframes progressAnimation4 {
+  0% {
+    width: 75%;
+    background-color: #2353e1;
+  }
+  100% {
+    width: 100%;
+    background-color: #2353e1;
+  }
 }
 
 /* !Custom package card  */
