@@ -499,3 +499,41 @@
   border: none;
   box-shadow: none;
 }
+
+@keyframes enterAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leaveAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.section-animation {
+  animation: enterAnimation 0.5s ease-in-out;
+}
+
+.section-leave-animation {
+  animation: leaveAnimation 0.5s ease-in-out;
+}
+
+.card-transition {
+  transition: display 0.5s ease-in-out;
+}
+
+.card-transition-active {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}

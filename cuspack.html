@@ -122,7 +122,7 @@
     <!--! First Section  -->
     <section
       id="progress_Section1"
-      class="d-block"
+      class="d-block section-animation"
       style="margin-top: 50px; margin-bottom: 50px"
     >
       <div class="row m-0 text-center">
@@ -155,7 +155,7 @@
               <p class="my-2 fs-5" style="font-weight: 700">Bronze</p>
               <p class="my-2 fs-6">£10</p>
               <p>Package includes:</p>
-              <div class="custom_card mx-auto" onclick="firstSecCard(10)">
+              <div class="custom_card mx-auto" onclick="firstSecCard(10);">
                 <p style="color: #ffffff" class="mt-4">Citrus pre-wash</p>
                 <p style="color: #ffffff" class="mt-4">
                   Dash and plastics dressed
@@ -172,7 +172,7 @@
               <p class="my-2 fs-5" style="font-weight: 700">Silver</p>
               <p class="my-2 fs-6">£20</p>
               <p>Package includes:</p>
-              <div class="custom_card mx-auto" onclick="firstSecCard(20)">
+              <div class="custom_card mx-auto" onclick="firstSecCard(20);">
                 <p style="color: #ffffff" class="mt-4">BRONZE PACKAGE</p>
                 <p style="color: #ffffff" class="mt-4">
                   All interior surfaces sanitised
@@ -189,7 +189,7 @@
               <p class="my-2 fs-5" style="font-weight: 700">Gold</p>
               <p class="my-2 fs-6">£30</p>
               <p>Package includes:</p>
-              <div class="custom_card mx-auto" onclick="firstSecCard(30)">
+              <div class="custom_card mx-auto" onclick="firstSecCard(30);">
                 <p style="color: #ffffff" class="mt-4">
                   BRONZE + SILVER PACKAGES
                 </p>
@@ -211,7 +211,8 @@
     <!--! Second Section  -->
     <section
       id="progress_Section2"
-      style="margin-top: 50px; margin-bottom: 50px; display: none"
+      class="d-none"
+      style="margin-top: 50px; margin-bottom: 50px"
     >
       <div class="row m-0 text-center">
         <div class="col">Stage 1 - Interior</div>
@@ -299,7 +300,8 @@
     <!--! Third Section  -->
     <section
       id="progress_Section3"
-      style="margin-top: 50px; margin-bottom: 50px; display: none"
+      class="d-none"
+      style="margin-top: 50px; margin-bottom: 50px"
     >
       <div class="row m-0 text-center">
         <div class="col">Stage 1 - Interior</div>
@@ -377,19 +379,19 @@
         </div>
       </div>
 
-      <a class="backBtn" onclick="backBtn2()">
-        <span class="line tLine"></span>
-        <span class="line mLine"></span>
-        <span class="label">Back</span>
-        <span class="line bLine"></span>
-      </a>
-
       <div class="my-5 text-center">
         <h1>Don't need extra packages</h1>
         <button class="primary-btn" onclick="thirdSecCard(0)">
           Confirm Order
         </button>
       </div>
+
+      <a class="backBtn" onclick="backBtn2()">
+        <span class="line tLine"></span>
+        <span class="line mLine"></span>
+        <span class="label">Back</span>
+        <span class="line bLine"></span>
+      </a>
     </section>
 
     <!--! Fourth Section  -->
