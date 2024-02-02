@@ -105,11 +105,10 @@ const handleSectionTransition = (currentSec, nextSec) => {
   nextSec.classList.add("section-animation");
   nextSec.classList.remove("section-leave-animation");
 
-  // Delay card display change for animation
   setTimeout(() => {
     currentSec.classList.add("d-none");
     nextSec.classList.remove("d-none");
-  }, 500); // 500ms duration of leaveAnimation
+  }, 500);
 };
 
 // Function to handle card transitions
@@ -121,7 +120,7 @@ const handleCardTransition = (currentCard, nextCard) => {
 // firstSectionCard click Logic
 const firstSecCard = (price) => {
   handleSectionTransition(firstSec, secondSec);
-  // handleCardTransition(firstSec, secondSec);
+  handleCardTransition(firstSec, secondSec);
 
   costArray.push(price);
 
