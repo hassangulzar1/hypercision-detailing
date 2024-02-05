@@ -10,19 +10,10 @@
   font-family: playfont;
 }
 
-/* !Heading 1  */
-.heading_1 {
-  font-size: 3rem;
-  color: white;
-  position: absolute;
-  top: 80px;
-  z-index: 100;
-  text-align: center;
-}
-
 .navbar {
   padding-top: 7px;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 100;
   padding-bottom: 10px;
@@ -415,55 +406,22 @@
   color: white;
 }
 
-.crowsl_img {
-  width: 65%;
-  padding-top: 100px;
-  height: 550px;
-  margin: auto;
-  padding-bottom: 40px;
+.homeImg {
+  width: 100vw;
+  height: 100%;
+  padding-top: 50px;
 }
 
 @media only screen and (max-width: 576px) {
-  .heading_1 {
-    font-size: 2rem;
-    color: white;
-    position: absolute;
-    top: 80px;
-    z-index: 100;
-    text-align: center;
-  }
-  .crowsl_img {
-    height: 400px;
-    width: 100vw;
-    margin: auto;
+  .homeImg {
+    height: auto;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-  .heading_1 {
-    font-size: 2.5rem;
-  }
-  .crowsl_img {
-    width: 100vw;
-    height: 400px;
-  }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  .heading_1 {
-    font-size: 3rem;
-  }
-  .crowsl_img {
-    width: 100vw;
-    height: 500px;
-  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .heading_1 {
-    font-size: 3rem;
-  }
-  .crowsl_img {
-    width: 80%;
-    height: 500px;
-  }
 }
 
 /* Buttons styling here  */
