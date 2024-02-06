@@ -1,94 +1,5 @@
-// // Custom card Logic
-//
-// let firstSec = document.getElementById("progress_Section1");
-// let secondSec = document.getElementById("progress_Section2");
-// let thirdSec = document.getElementById("progress_Section3");
-// let fourthSec = document.getElementById("progress_Section4");
-// let costElement = document.getElementById("costElement");
-//
-// const costArray = [];
-// let sum = 0;
-// // firstSectionCard click Logic
-//
-// const firstSecCard = (price) => {
-//   firstSec.classList.remove("d-block");
-//   firstSec.classList.add("d-none");
-//   secondSec.classList.remove("d-none");
-//   secondSec.classList.add("d-block");
-//   costArray.push(price);
-//
-//   sum = costArray.reduce(
-//     (accumulator, currentValue) => accumulator + currentValue,
-//     0
-//   );
-//   costElement.innerHTML = sum + "£";
-// };
-//
-// const secondSecCard = (price) => {
-//   secondSec.classList.remove("d-block");
-//   secondSec.classList.add("d-none");
-//   thirdSec.classList.remove("d-none");
-//   thirdSec.classList.add("d-block");
-//   costArray.push(price);
-//
-//   sum = costArray.reduce(
-//     (accumulator, currentValue) => accumulator + currentValue,
-//     0
-//   );
-//   costElement.innerHTML = sum + "£";
-// };
-//
-// const thirdSecCard = (price) => {
-//   thirdSec.classList.remove("d-block");
-//   thirdSec.classList.add("d-none");
-//   fourthSec.classList.remove("d-none");
-//   fourthSec.classList.add("d-block");
-//   costArray.push(price);
-//
-//   sum = costArray.reduce(
-//     (accumulator, currentValue) => accumulator + currentValue,
-//     0
-//   );
-//   costElement.innerHTML = sum + "£";
-// };
-//
-// //! Back button login
-// const backBtn1 = () => {
-//   secondSec.classList.remove("d-block");
-//   secondSec.classList.add("d-none");
-//   firstSec.classList.remove("d-none");
-//   firstSec.classList.add("d-block");
-//
-//   costArray.pop();
-//   sum = costArray.reduce(
-//     (accumulator, currentValue) => accumulator + currentValue,
-//     0
-//   );
-//   costElement.innerHTML = sum + "£";
-// };
-//
-// const backBtn2 = () => {
-//   secondSec.classList.remove("d-none");
-//   secondSec.classList.add("d-block");
-//   thirdSec.classList.remove("d-block");
-//   thirdSec.classList.add("d-none");
-//
-//   costArray.pop();
-//   sum = costArray.reduce(
-//     (accumulator, currentValue) => accumulator + currentValue,
-//     0
-//   );
-//   costElement.innerHTML = sum + "£";
-// };
-//
-// const backBtn3 = () => {
-//   thirdSec.classList.remove("d-none");
-//   thirdSec.classList.add("d-block");
-//   fourthSec.classList.remove("d-block");
-//   fourthSec.classList.add("d-none");
-// };
-
 //! Custom card Logic
+let locationSec = document.getElementById("location-Sec");
 let firstSec = document.getElementById("progress_Section1");
 let secondSec = document.getElementById("progress_Section2");
 let thirdSec = document.getElementById("progress_Section3");
@@ -98,7 +9,7 @@ let costElement = document.getElementById("costElement");
 const costArray = [];
 let sum = 0;
 
-// Function to handle section transitions
+//! Function to handle section transitions
 const handleSectionTransition = (currentSec, nextSec) => {
   currentSec.classList.add("section-leave-animation");
   currentSec.classList.remove("section-animation");
@@ -111,13 +22,18 @@ const handleSectionTransition = (currentSec, nextSec) => {
   }, 500);
 };
 
-// Function to handle card transitions
+//! Function to handle card transitions
 const handleCardTransition = (currentCard, nextCard) => {
   currentCard.classList.remove("card-transition-active");
   nextCard.classList.add("card-transition-active");
 };
 
-// firstSectionCard click Logic
+// !firstSectionCard click Logic
+
+const goToSage1 = () => {
+  handleSectionTransition(locationSec, firstSec);
+  handleCardTransition(locationSec, firstSec);
+};
 const firstSecCard = (price) => {
   handleSectionTransition(firstSec, secondSec);
   handleCardTransition(firstSec, secondSec);
@@ -158,6 +74,11 @@ const thirdSecCard = (price) => {
 };
 
 //! Back button login
+
+const backToLocation = () => {
+  handleSectionTransition(firstSec, locationSec);
+  handleCardTransition(firstSec, locationSec);
+};
 const backBtn1 = () => {
   handleSectionTransition(secondSec, firstSec);
   handleCardTransition(secondSec, firstSec);

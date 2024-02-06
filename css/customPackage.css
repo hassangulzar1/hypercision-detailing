@@ -18,7 +18,7 @@
   transition-property: width, background-color;
 }
 .progress-moved .progress-bar1 {
-  width: 25%;
+  width: 20%;
   background-color: #2353e1;
   animation: progressAnimation1 4s;
 }
@@ -29,7 +29,7 @@
     background-color: #7a9afd;
   }
   100% {
-    width: 25%;
+    width: 20%;
     background-color: #2353e1;
   }
 }
@@ -47,18 +47,18 @@
 }
 
 .progress-moved .progress-bar2 {
-  width: 50%;
+  width: 40%;
   background-color: #2353e1;
   animation: progressAnimation2 3s;
 }
 
 @keyframes progressAnimation2 {
   0% {
-    width: 25%;
+    width: 20%;
     background-color: #2353e1;
   }
   100% {
-    width: 50%;
+    width: 40%;
     background-color: #2353e1;
   }
 }
@@ -75,18 +75,18 @@
 }
 
 .progress-moved .progress-bar3 {
-  width: 75%;
+  width: 60%;
   background-color: #2353e1;
   animation: progressAnimation3 3s;
 }
 
 @keyframes progressAnimation3 {
   0% {
-    width: 50%;
+    width: 40%;
     background-color: #2353e1;
   }
   100% {
-    width: 75%;
+    width: 60%;
     background-color: #2353e1;
   }
 }
@@ -104,14 +104,42 @@
 }
 
 .progress-moved .progress-bar4 {
-  width: 100%;
+  width: 80%;
   background-color: #2353e1;
   animation: progressAnimation4 3s;
 }
 
 @keyframes progressAnimation4 {
   0% {
-    width: 75%;
+    width: 60%;
+    background-color: #2353e1;
+  }
+  100% {
+    width: 80%;
+    background-color: #2353e1;
+  }
+}
+/* ! 5th Progress Bar  */
+.progress-bar5 {
+  height: 10px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar5 {
+  width: 100%;
+  background-color: #2353e1;
+  animation: progressAnimation4 3s;
+}
+
+@keyframes progressAnimation5 {
+  0% {
+    width: 80%;
     background-color: #2353e1;
   }
   100% {
@@ -123,7 +151,7 @@
 /* !Custom package card  */
 .custom_card {
   cursor: pointer;
-  width: 190px;
+  width: 250px;
   height: 254px;
   border-radius: 30px;
   background: #2353ff;
@@ -132,7 +160,7 @@
 }
 
 .custom_card:hover {
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 /* !back button style  */
@@ -161,4 +189,18 @@
 .back-btn:hover > svg {
   font-size: 1.2em;
   transform: translateX(-5px);
+}
+
+/* Custom package include box  */
+.include_box {
+  background: #6b8bfe;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  width: 250px;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
