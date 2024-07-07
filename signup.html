@@ -158,5 +158,27 @@
         </div>
       </div>
     </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <!--! Initialize Swiper -->
+    <script>
+      function toggleDropdown() {
+        var dropdownContent = document.getElementById("searchDropdownContent");
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      }
+
+      document.addEventListener("click", function (event) {
+        var dropdown = document.getElementById("searchDropdown");
+        var dropdownContent = document.getElementById("searchDropdownContent");
+
+        if (event.target.closest("#searchDropdown") !== dropdown) {
+          dropdownContent.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
