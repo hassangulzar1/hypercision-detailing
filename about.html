@@ -35,10 +35,15 @@
           ><img src="./media/image2.png" alt="logo" id="logo-hd"
         /></a>
         <div class="d-flex">
-          <a class="btn rounded-pill me-2 btn-hd-2 hero-btn-hd" href="#">
+          <a
+            class="btn rounded-pill me-2 btn-hd-2 hero-btn-hd"
+            href="./signin.html"
+          >
             Log in</a
           >
-          <a class="btn rounded-pill me-2 btn-hd hero-btn-hd" href="#"
+          <a
+            class="btn rounded-pill me-2 btn-hd hero-btn-hd"
+            href="./signin.html"
             >Sign In</a
           >
           <button
@@ -112,7 +117,7 @@
                 Account
               </div>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">login</a></li>
+                <li><a class="dropdown-item" href="./signin.html">login</a></li>
                 <li><a class="dropdown-item" href="#">Sign up</a></li>
               </ul>
             </div>
@@ -206,4 +211,24 @@
       </div>
     </div>
   </body>
+  <!--! Initialize Swiper -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    function toggleDropdown() {
+      var dropdownContent = document.getElementById("searchDropdownContent");
+      dropdownContent.style.display =
+        dropdownContent.style.display === "block" ? "none" : "block";
+    }
+
+    document.addEventListener("click", function (event) {
+      var dropdown = document.getElementById("searchDropdown");
+      var dropdownContent = document.getElementById("searchDropdownContent");
+
+      if (event.target.closest("#searchDropdown") !== dropdown) {
+        dropdownContent.style.display = "none";
+      }
+    });
+  </script>
 </html>
