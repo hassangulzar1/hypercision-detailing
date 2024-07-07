@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-utilities.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/hd-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .letter {
+        font-size: 1.2em;
+      }
+      .paragraph {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .img1 {
+        width: 100px;
+        height: 100px;
+      }
+      .card {
+        width: 18rem;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      .card-body {
+        display: flex;
+        justify-content: space-between;
+      }
+      .fa-linkedin,
+      .fa-github {
+        font-size: 30px;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--! Navbar  -->
+    <nav
+      class="navbar navbar-expand-lg navbar-custom align-items-center nav-bg"
+      style="background-color: black; z-index: 200"
+    >
+      <div class="container">
+        <a class="nav-hd text-light text-center" href="/"
+          ><img src="./media/image2.png" alt="logo" id="logo-hd"
+        /></a>
+        <div class="d-flex">
+          <a class="btn rounded-pill me-2 btn-hd-2 hero-btn-hd" href="#">
+            Log in</a
+          >
+          <a class="btn rounded-pill me-2 btn-hd hero-btn-hd" href="#"
+            >Sign In</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="background-color: white"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item me-4">
+              <a
+                class="nav-link text-light"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="./package.html">Packages</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-light" href="#">About us</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div class="nav-item me-4">
+              <div class="dropdown" id="searchDropdown">
+                <li
+                  class="nav-link text-light"
+                  style="cursor: pointer"
+                  onclick="toggleDropdown()"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+                </li>
+                <div class="dropdown-content" id="searchDropdownContent">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search here"
+                  />
+                  <!-- Additional dropdown content can be added here -->
+                </div>
+              </div>
+            </div>
+            <div class="btn-group nav-hd-hero">
+              <div
+                type="button"
+                class="dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Account
+              </div>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">login</a></li>
+                <li><a class="dropdown-item" href="#">Sign up</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="bold mb-4">About Us</h1>
+      <b class="letter">Our Mission</b>
+      <p class="paragraph my-4">
+        JobPilot began as an ambitious project for the Azure Cosmos DB
+        Hackathon. Our mission is to empower job seekers in their journey
+        towards securing their ideal roles. We aim to increase your
+        opportunities for interviews, job offers, and ultimately help you land
+        your dream job. For more information on the hackathon, visit the
+        <a
+          style="text-decoration: none"
+          href="https://azurecosmosdb.devpost.com/"
+          >Azure Cosmos DB Hackathon</a
+        >.
+      </p>
+      <b class="letter">Participating Companies</b>
+      <div class="mt-5">
+        <div class="row">
+          <div class="col-3">
+            <img src="./media/download.png" alt="Devpost" class="img1" />
+            <p>
+              <a style="text-decoration: none" href="https://devpost.com/"
+                >Devpost</a
+              >
+            </p>
+          </div>
+          <div class="col-3">
+            <img src="./media/download (1).png" alt="Microsoft" class="img1" />
+            <p>
+              <a style="text-decoration: none" href="https://www.microsoft.com/"
+                >Microsoft</a
+              >
+            </p>
+          </div>
+          <div class="col-3">
+            <img src="./media/download (2).png" alt="Reactor" class="img1" />
+            <p>
+              <a
+                style="text-decoration: none"
+                href="https://learn.microsoft.com/en-us/shows/reactor/"
+                >Reactor</a
+              >
+            </p>
+          </div>
+          <div class="col-3">
+            <img src="./media/mS.jpg" alt="Microsoft Learning" class="img1" />
+            <p>
+              <a
+                style="text-decoration: none"
+                href="https://learn.microsoft.com/en-us/"
+                >Microsoft Learning</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 mb-5 d-flex justify-content-evenly">
+        <b class="letter">Our Team</b>
+        <div
+          class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center mt-4"
+        >
+          <div class="card">
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="./media/HeroIma.jpg"
+                class="card-img-top img"
+                alt="Image"
+              />
+            </div>
+            <b class="d-flex justify-content-center mt-1">Muhammad Arham</b>
+            <b class="d-flex justify-content-center mt-2"
+              >(MERN Stack Developer)</b
+            >
+            <div class="card-body d-flex justify-content-evenly">
+              <a
+                href="https://www.linkedin.com/in/arhamansari12/"
+                style="text-decoration: none; text-decoration-color: none"
+              >
+                <i class="fa-brands fa-linkedin me-4"></i>
+              </a>
+              <a href="https://github.com/arhamansari11">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center mt-4"
+        >
+          <div class="card">
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="./media/1599486574612.jpeg"
+                class="card-img-top img"
+                alt="Image"
+              />
+            </div>
+            <b class="d-flex justify-content-center mt-1">Rowan Wood</b>
+            <b class="d-flex justify-content-center mt-2">(Team Leader)</b>
+            <div class="card-body d-flex justify-content-evenly">
+              <a
+                href="https://www.linkedin.com/in/rowanwood/"
+                style="text-decoration: none; text-decoration-color: none"
+              >
+                <i class="fa-brands fa-linkedin me-4"></i>
+              </a>
+              <a href="https://github.com/mrdiamonddirt">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center mt-4"
+        >
+          <div class="card">
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="./media/122821437.png"
+                class="card-img-top img"
+                alt="Image"
+              />
+            </div>
+            <b class="d-flex justify-content-center mt-1">Hassan Gulzar</b>
+            <b class="d-flex justify-content-center mt-2"
+              >(MERN Stack Developer)</b
+            >
+            <div class="card-body d-flex justify-content-evenly">
+              <a
+                href="https://linkedin.com/in/hassan-gulzar-256292267/"
+                style="text-decoration: none; text-decoration-color: none"
+              >
+                <i class="fa-brands fa-linkedin me-4"></i>
+              </a>
+              <a href="https://github.com/hassangulzar1">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center mt-4"
+        >
+          <div class="card">
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="./media/1713618830981.jpeg"
+                class="card-img-top img"
+                alt="Image"
+              />
+            </div>
+            <b class="d-flex justify-content-center mt-1">Najmi Al Hassan</b>
+            <b class="d-flex justify-content-center mt-2"
+              >(ML and AI Engineer)</b
+            >
+            <div class="card-body d-flex justify-content-evenly">
+              <a
+                href="https://www.linkedin.com/in/najmihassan/"
+                style="text-decoration: none; text-decoration-color: none"
+              >
+                <i class="fa-brands fa-linkedin me-4"></i>
+              </a>
+              <a href="https://github.com/arhamansari11">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
