@@ -99,8 +99,10 @@
                 Account
               </div>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">login</a></li>
-                <li><a class="dropdown-item" href="#">Sign up</a></li>
+                <li><a class="dropdown-item" href="./signin.html">login</a></li>
+                <li>
+                  <a class="dropdown-item" href="./signup.html">Sign up</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -118,7 +120,7 @@
       "
     >
       <div class="custom-container mx-auto">
-        <div class="custom-heading">Log In</div>
+        <div class="custom-heading">Sign Up</div>
         <form class="custom-form" action="">
           <input
             placeholder="E-mail"
@@ -136,16 +138,22 @@
             class="custom-input"
             required=""
           />
-          <span class="custom-forgot-password"
-            ><a style="color: #5177ff">Forgot Password ?</a></span
-          >
-          <input value="Log In" type="submit" class="primary-btn my-3" />
+          <input
+            placeholder="Confirm Password"
+            id="password"
+            name="password"
+            type="password"
+            class="custom-input"
+            required=""
+          />
+
+          <input value="Register" type="submit" class="primary-btn my-3" />
         </form>
 
         <div class="custom-signup-prompt my-3">
           <span class="custom-signup-text"
-            >Don't have an account?
-            <a href="./signup.html" style="color: #5177ff">Sign Up</a></span
+            >Already Have Account?
+            <a href="./signin.html" style="color: #5177ff">Login here</a></span
           >
         </div>
       </div>
