@@ -114,3 +114,21 @@ const backBtn3 = () => {
   );
   costElement.innerHTML = sum + "£";
 };
+
+// Map javaScript
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".contact-form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // Add your email sending logic here
+    alert("Form submitted!");
+  });
+
+  // Leaflet Map
+  const L = window.L;
+  const map = L.map("map").setView([31.39, 73.09], 15);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+});
