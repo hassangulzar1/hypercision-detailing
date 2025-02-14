@@ -126,7 +126,7 @@
     >
       <div class="custom-container mx-auto">
         <div class="custom-heading">Log In</div>
-        <form class="custom-form" action="">
+        <form class="custom-form" onsubmit="handleLogin(event)">
           <input
             placeholder="E-mail"
             id="email"
@@ -312,6 +312,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <!-- Your Firebase config file -->
+    <script src="./firebase-config.js"></script>
     <!--! Initialize Swiper -->
     <script>
       function toggleDropdown() {

@@ -236,6 +236,7 @@
 .hero-btn-hd {
   display: none;
 }
+
 @media (min-width: 993px) {
   .nav-hd-hero {
     display: block;
