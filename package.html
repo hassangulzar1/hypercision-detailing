@@ -152,7 +152,10 @@
                 <p>Dash and plastics dressed</p>
                 <p class="mb-5">Interior windows cleaned</p>
 
-                <a href="#" class="primary-btn"
+                <a
+                  href="#"
+                  class="primary-btn"
+                  onclick="addOrder('£45', 'Mini Valet')"
                   >Book here<svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -191,7 +194,10 @@
                 <p>Wax exterior</p>
                 <p class="mb-5">Exterior plastics dressed</p>
 
-                <a href="#" class="primary-btn"
+                <a
+                  href="#"
+                  class="primary-btn"
+                  onclick="addOrder('£70', 'Full Valet')"
                   >Book here<svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -233,7 +239,10 @@
                   particles and tar.
                 </p>
 
-                <a href="#" class="primary-btn"
+                <a
+                  href="#"
+                  class="primary-btn"
+                  onclick="addOrder('£100', 'Premium Valet')"
                   >Book here<svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -270,7 +279,10 @@
 
                 <p class="mb-5">COMING SOON</p>
 
-                <a href="#" class="primary-btn"
+                <a
+                  href="#"
+                  class="primary-btn"
+                  onclick="addOrder('£150', 'HYPRECISION DETAIL')"
                   >Book here<svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -442,12 +454,11 @@
         </div>
       </footer>
     </div>
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
-    <!-- Your Firebase config file -->
-    <script src="./firebase-config.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

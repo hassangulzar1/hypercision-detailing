@@ -17,8 +17,6 @@ const db = firebase.firestore();
 // Login function
 function handleLogin(e) {
   e.preventDefault();
-  console.log(auth);
-  console.log(db);
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
@@ -112,24 +110,25 @@ function handleSignOut() {
 
 function addOrder(productPrice, productName) {
   // Get the currently authenticated user
-  const user = auth.currentUser;
-  if (!user || user === "") {
-    alert("No authenticated user found.");
-    return;
-  }
+  auth.onAuthStateChanged((user) => {
+    if (!user || user === "") {
+      alert("No authenticated user found.");
+      return;
+    }
 
-  // Add a new document in the "orders" collection
-  db.collection("orders")
-    .add({
-      userEmail: user.email, // Authenticated user's email
+    const doc = {
+      userEmail: user.email, // Save only the email string
       productName: productName,
       productPrice: productPrice,
-      placedAt: firebase.firestore.FieldValue.serverTimestamp(), // Server timestamp
-    })
-    .then(function (docRef) {
-      console.log("Order successfully added with ID:", docRef.id);
-    })
-    .catch(function (error) {
-      console.error("Error adding order:", error);
-    });
+    };
+
+    db.collection("orders")
+      .doc("la")
+      .set(doc)
+      .then(() => alert("Order successfully added."))
+      .catch((error) => {
+        console.error("Error adding order:", error);
+        alert("Error adding order: " + error);
+      });
+  });
 }
