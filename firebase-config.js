@@ -32,6 +32,7 @@ function handleLogin(e) {
     .catch((error) => {
       alert(error.message);
     });
+  alert("Login Successful");
 }
 
 // Sign up function
@@ -59,6 +60,7 @@ function handleSignup(e) {
     .then(() => {
       // Redirect to home page or dashboard
       window.location.href = "./index.html";
+      alert("Sign Up Successful");
     })
     .catch((error) => {
       alert(error.message);
@@ -105,5 +107,29 @@ function handleSignOut() {
     })
     .catch((error) => {
       alert(error.message);
+    });
+}
+
+function addOrder(productPrice, productName) {
+  // Get the currently authenticated user
+  const user = auth.currentUser;
+  if (!user || user === "") {
+    alert("No authenticated user found.");
+    return;
+  }
+
+  // Add a new document in the "orders" collection
+  db.collection("orders")
+    .add({
+      userEmail: user.email, // Authenticated user's email
+      productName: productName,
+      productPrice: productPrice,
+      placedAt: firebase.firestore.FieldValue.serverTimestamp(), // Server timestamp
+    })
+    .then(function (docRef) {
+      console.log("Order successfully added with ID:", docRef.id);
+    })
+    .catch(function (error) {
+      console.error("Error adding order:", error);
     });
 }

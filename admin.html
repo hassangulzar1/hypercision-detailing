@@ -3,25 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Pannel</title>
-    <link rel="stylesheet" href="./css/admin.css" />
-    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" href="./css/bootstrap-utilities.min.css" />
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
+    <style>
+      .sidebar {
+        z-index: 1000;
+      }
+      .overlay {
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .border-left {
+        border-left: 5px solid #0d6efd !important;
+      }
+      .loading {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .table-responsive {
+        max-height: 500px;
+        overflow-y: auto;
+      }
+    </style>
   </head>
   <body>
-    <!-- overlay -->
-    <div
-      id="sidebar-overlay"
-      class="overlay w-100 vh-100 position-fixed d-none"
-    ></div>
-
-    <!-- sidebar -->
+    <!-- Sidebar -->
     <div
       class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar"
       id="sidebar"
@@ -33,133 +46,108 @@
         <a
           href="#"
           class="list-group-item list-group-item-action active border-0 d-flex align-items-center"
+          data-page="users"
         >
-          <span class="bi bi-house-door-fill"></span>
-          <span class="ml-2">Home</span>
+          <span class="bi bi-people-fill"></span>
+          <span class="ml-2">Users</span>
         </a>
         <a
           href="#"
           class="list-group-item list-group-item-action border-0 align-items-center"
+          data-page="orders"
         >
           <span class="bi bi-box2-heart-fill"></span>
-          <span class="ml-2">Packages</span>
-        </a>
-        <a
-          href="#"
-          class="list-group-item list-group-item-action border-0 align-items-center"
-        >
-          <span class="bi bi-file-earmark-person-fill"></span>
-          <span class="ml-2">About us</span>
-        </a>
-
-        <a
-          href="#"
-          class="list-group-item list-group-item-action border-0 align-items-center"
-        >
-          <span class="bi bi-person-rolodex"></span>
-          <span class="ml-2">Contact us</span>
+          <span class="ml-2">Package Orders</span>
         </a>
       </div>
     </div>
 
+    <!-- Main Content -->
     <div class="col-md-9 col-lg-10 ml-md-auto px-0 ms-md-auto">
-      <!-- top nav -->
+      <!-- Top Nav -->
       <nav class="w-100 d-flex px-4 py-2 mb-4 shadow-sm">
-        <!-- close sidebar -->
         <button class="btn py-0 d-lg-none" id="open-sidebar">
           <span class="bi bi-list text-primary h3"></span>
         </button>
-        <div class="dropdown ml-auto">
+        <div class="dropdown ms-auto">
           <button
             class="btn py-0 d-flex align-items-center"
             id="logout-dropdown"
-            data-toggle="dropdown"
+            data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             <span class="bi bi-person text-primary h4"></span>
             <span class="bi bi-chevron-down ml-1 mb-2 small"></span>
           </button>
-          <div
-            class="dropdown-menu dropdown-menu-right border-0 shadow-sm"
-            aria-labelledby="logout-dropdown"
-          >
-            <a class="dropdown-item" href="#">Logout</a>
-            <a class="dropdown-item" href="#">Settings</a>
+          <div class="dropdown-menu dropdown-menu-end border-0 shadow-sm">
+            <a class="dropdown-item" href="#" onclick="handleSignOut()"
+              >Sign Out</a
+            >
           </div>
         </div>
       </nav>
 
-      <!-- main content -->
-      <main class="p-4 min-vh-100">
-        <section class="row">
-          <div class="col-md-6 col-lg-4">
-            <!-- card -->
-            <article class="p-4 rounded shadow-sm border-left mb-4">
-              <a href="#" class="d-flex align-items-center">
-                <span class="bi bi-box h5"></span>
-                <h5 class="ml-2">Products</h5>
-              </a>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <article class="p-4 rounded shadow-sm border-left mb-4">
-              <a href="#" class="d-flex align-items-center">
-                <span class="bi bi-person h5"></span>
-                <h5 class="ml-2">Customers</h5>
-              </a>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <article class="p-4 rounded shadow-sm border-left mb-4">
-              <a href="#" class="d-flex align-items-center">
-                <span class="bi bi-person-check h5"></span>
-                <h5 class="ml-2">Sellers</h5>
-              </a>
-            </article>
-          </div>
-        </section>
+      <!-- Loading Spinner -->
+      <div class="loading" id="loading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
 
-        <div
-          class="jumbotron jumbotron-fluid rounded bg-white border-0 shadow-sm border-left px-4"
-        >
-          <div class="container">
-            <h1 class="display-4 mb-2 text-primary">Simple</h1>
-            <p class="lead text-muted">
-              Simple Admin Dashboard with Bootstrap.
-            </p>
+      <!-- Main content -->
+      <main class="p-4 min-vh-100">
+        <!-- Users Table Section -->
+        <div id="users-section">
+          <h2 class="mb-4">Authenticated Users</h2>
+          <div class="loading" id="loading">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Created At</th>
+                </tr>
+              </thead>
+              <tbody id="users-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Orders Table Section -->
+        <div id="orders-section" style="display: none">
+          <h2 class="mb-4">Package Orders</h2>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>User Email</th>
+                  <th>Package</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="orders-table-body"></tbody>
+            </table>
           </div>
         </div>
       </main>
     </div>
 
-    <script>
-      $(document).ready(() => {
-        $("#open-sidebar").click(() => {
-          // add class active on #sidebar
-          $("#sidebar").addClass("active");
-
-          // show sidebar overlay
-          $("#sidebar-overlay").removeClass("d-none");
-        });
-
-        $("#sidebar-overlay").click(function () {
-          // add class active on #sidebar
-          $("#sidebar").removeClass("active");
-
-          // show sidebar overlay
-          $(this).addClass("d-none");
-        });
-      });
-    </script>
-
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
-    <!-- Your Firebase config file -->
+
+    <!-- Your Firebase config and admin scripts -->
     <script src="./firebase-config.js"></script>
   </body>
 </html>
